@@ -33,9 +33,14 @@ const createNav = () => {
 }
 
 const createMain = () => {
-    const content = document.createElement('div');
-    content.classList.add('content')
-    
+    const main = document.createElement('div');
+    main.classList.add('main')
+
+    const mainContent = document.createElement('div');
+    mainContent.classList.add('main-content')
+
+    content.append(main)
+    main.append(mainContent)
 }
 
 const createFooter = () => {
@@ -50,5 +55,8 @@ const createFooter = () => {
     content.append(footer)
 }
 
-createHeader(); 
-createFooter();
+const createPage = (() => {
+    createHeader();
+    createMain(); 
+    createFooter();
+})()

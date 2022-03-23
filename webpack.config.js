@@ -2,10 +2,10 @@ const path = require('path');
 
 module.exports = {
   entry: [
-    './src/index.js',
-    './src/home.js',
-    './src/menu.js',
-    './src/contact.js',
+    './scripts/src/index.js',
+    './scripts/src/home.js',
+    './scripts/src/menu.js',
+    './scripts/src/contact.js',
   ],
 
   output: {
