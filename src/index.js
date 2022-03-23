@@ -34,7 +34,8 @@ const createNav = () => {
 
 const createMain = () => {
     const content = document.createElement('div');
-    content.classList.add('div')
+    content.classList.add('content')
+    
 }
 
 const createFooter = () => {

@@ -1,3 +1,5 @@
+/* Fonts */
+
 @font-face {
     font-family: 'GreatVibes';
     src: url(/src/fonts/Great_Vibes/GreatVibes.ttf) format('truetype');
@@ -7,6 +9,8 @@
     font-family: 'Kanit';
     src: url(/src/fonts/Kanit/Kanit-Light.ttf) format('truetype');
 }
+
+/* Main */
 
 * {
     box-sizing: border-box;
@@ -28,6 +32,8 @@ a {
     color: inherit;
 }
 
+/* Buttons */
+
 button {
     background: none;
 	color: inherit;
@@ -42,13 +48,15 @@ button:hover {
     transition-duration: .8s;
 }
 
+/* Header */
+
 .header {
     display: flex;
     flex-direction: column;
     height: 20vh;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap: 50px;
     background-color: var(--menu-color);
     opacity: 0.85;
     color: var(--main-text);
@@ -67,6 +75,9 @@ button:hover {
     display: flex;
     gap: 10vw;
 }
+
+
+/* Footer */
 
 .footer {
     position: absolute;
