@@ -1,4 +1,8 @@
 import './styles.css';
+// import './home.js';
+// import './menu.js';
+// import './contact.js';
+import plateImage from '../images/plate.jpeg'
 
 const content = document.querySelector('.content')
 
@@ -34,13 +38,31 @@ const createNav = () => {
 
 const createMain = () => {
     const main = document.createElement('div');
-    main.classList.add('main')
+    main.classList.add('main');
 
     const mainContent = document.createElement('div');
-    mainContent.classList.add('main-content')
+    mainContent.classList.add('main-content');
 
-    content.append(main)
-    main.append(mainContent)
+    content.append(main);
+    main.append(mainContent);
+
+    const paragraph = document.createElement('p');
+    paragraph.classList.add('about');
+    paragraph.textContent = 'One of the finest French restaurants in all of North America.'
+
+    const plate = new Image();
+    plate.classList.add('plate')
+    plate.src = plateImage;
+
+    const paragraph1 = document.createElement('p');
+    paragraph1.classList.add('about')
+    paragraph1.textContent = 'Inspired by the bistro genre, our menu celebrates timeless French cooking with dishes that celebrate traditional European techniques.'
+    
+    mainContent.append(paragraph);
+    mainContent.append(plate)
+    mainContent.append(paragraph1);
+
+    return mainContent
 }
 
 const createFooter = () => {
@@ -60,3 +82,5 @@ const createPage = (() => {
     createMain(); 
     createFooter();
 })()
+
+// export {createMain, createPage}

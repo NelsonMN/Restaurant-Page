@@ -20,7 +20,7 @@
 }
 
 :root {
-    --menu-color: #416561;
+    --menu-color: rgb(65, 101, 97);
     --main-text: beige;
 }
 
@@ -74,7 +74,7 @@ button:hover {
     color: var(--main-text);
     font-family: 'Kanit';
     font-weight: 100;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .title {
@@ -96,12 +96,32 @@ button:hover {
 }
 
 .main-content {
-    margin: 125px 300px;
-    height: 650px;
-    background-color: var(--menu-color);
-    opacity: .85;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 125px 250px;
+    background-color: rgba(65, 101, 97, 0.85);
+    border-radius: 10px;
+    padding: 50px 100px;
 }
 
+.about {
+    display: flex;
+    align-items: center;
+    font-family: 'Kanit';
+    font-size: 24px;
+    color: var(--main-text);
+    text-align: center;
+}
+
+.plate {
+    margin: 30px 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 10px;
+    align-self: center;
+}
 
 /* Footer */
 
@@ -116,7 +136,7 @@ button:hover {
     opacity: 0.85;
     color: var(--main-text);
     font-family: 'Kanit';
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .footer > a:hover {
