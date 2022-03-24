@@ -7,7 +7,7 @@ module.exports = {
     './src/scripts/menu.js',
     './src/scripts/contact.js',
   ],
-
+  devtool: 'inline-source-map',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),

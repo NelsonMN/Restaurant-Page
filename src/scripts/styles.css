@@ -20,7 +20,7 @@
 }
 
 :root {
-    --menu-color: rgb(65, 101, 97);
+    --menu-color: rgba(65, 101, 97, 0.85);
     --main-text: beige;
 }
 
@@ -70,7 +70,6 @@ button:hover {
     align-items: center;
     gap: 50px;
     background-color: var(--menu-color);
-    opacity: 0.85;
     color: var(--main-text);
     font-family: 'Kanit';
     font-weight: 100;
@@ -95,20 +94,19 @@ button:hover {
     min-height: 72vh;
 }
 
-.main-content {
+/* Home */
+.home {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     margin: 125px 250px;
-    background-color: rgba(65, 101, 97, 0.85);
+    background-color: var(--menu-color);
     border-radius: 10px;
     padding: 50px 100px;
 }
 
-.about {
-    display: flex;
-    align-items: center;
+.about { 
     font-family: 'Kanit';
     font-size: 24px;
     color: var(--main-text);
@@ -133,7 +131,6 @@ button:hover {
     align-items: center;
     width: 100vw;
     background-color: var(--menu-color);
-    opacity: 0.85;
     color: var(--main-text);
     font-family: 'Kanit';
     font-size: 20px;

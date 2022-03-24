@@ -1,8 +1,7 @@
-import './styles.css';
-// import './home.js';
-// import './menu.js';
-// import './contact.js';
-import plateImage from '../images/plate.jpeg'
+import './styles.css'; 
+import prepareHome from './home';
+// import './menu';
+// import './contact';
 
 const content = document.querySelector('.content')
 
@@ -17,6 +16,8 @@ const createHeader = () => {
     content.appendChild(header);
     header.appendChild(title);
     header.append(createNav())
+
+    return header
 }
 
 const createNav = () => {
@@ -33,36 +34,16 @@ const createNav = () => {
     contact.textContent = 'Contact'
 
     nav.append(home, menu, contact)
+
     return nav
 }
 
 const createMain = () => {
     const main = document.createElement('div');
     main.classList.add('main');
-
-    const mainContent = document.createElement('div');
-    mainContent.classList.add('main-content');
-
     content.append(main);
-    main.append(mainContent);
 
-    const paragraph = document.createElement('p');
-    paragraph.classList.add('about');
-    paragraph.textContent = 'One of the finest French restaurants in all of North America.'
-
-    const plate = new Image();
-    plate.classList.add('plate')
-    plate.src = plateImage;
-
-    const paragraph1 = document.createElement('p');
-    paragraph1.classList.add('about')
-    paragraph1.textContent = 'Inspired by the bistro genre, our menu celebrates timeless French cooking with dishes that celebrate traditional European techniques.'
-    
-    mainContent.append(paragraph);
-    mainContent.append(plate)
-    mainContent.append(paragraph1);
-
-    return mainContent
+    return main
 }
 
 const createFooter = () => {
@@ -75,12 +56,14 @@ const createFooter = () => {
     
     footer.append(madeBy)
     content.append(footer)
+
+    return footer
 }
 
-const createPage = (() => {
-    createHeader();
-    createMain(); 
-    createFooter();
-})()
+(function CreateWebsite() {
+    content.appendChild(createHeader());
+    content.appendChild(createMain()); 
+    content.appendChild(createFooter());
 
-// export {createMain, createPage}
+    prepareHome();
+}())

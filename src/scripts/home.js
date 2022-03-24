@@ -1,6 +1,31 @@
+import plateImage from '../images/plate.jpeg'
 
+function makeHome() {
+    const home = document.createElement('div');
+    home.classList.add('home')
 
-const paragraph = document.createElement(div)
+    const paragraph = document.createElement('p');
+    paragraph.classList.add('about');
+    paragraph.textContent = 'One of the finest French restaurants in all of North America.'
 
+    const plate = new Image();
+    plate.classList.add('plate')
+    plate.src = plateImage;
 
+    const paragraph1 = document.createElement('p');
+    paragraph1.classList.add('about')
+    paragraph1.textContent = 'Inspired by the bistro genre, our menu celebrates timeless French cooking with dishes that celebrate traditional European techniques.'
 
+    home.append(paragraph);
+    home.append(plate)
+    home.append(paragraph1);
+
+    return home
+    }
+
+const prepareHome = () => {
+    const main = document.querySelector(".main");
+    main.appendChild(makeHome());
+}
+
+export default prepareHome
