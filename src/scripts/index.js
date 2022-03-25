@@ -30,7 +30,7 @@ const createNav = () => {
     const home = document.createElement('button');
     home.textContent = 'Home'
 
-    home.addEventListener('click', () => {
+    home.addEventListener('click', function load() {
         const main = document.querySelector('.main')
         main.textContent = '';
         prepareHome()
