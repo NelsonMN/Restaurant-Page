@@ -73,7 +73,7 @@ button:hover {
     color: var(--main-text);
     font-family: 'Kanit';
     font-weight: 100;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .title {
@@ -84,6 +84,8 @@ button:hover {
 
 .nav {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 10vw;
 }
 
@@ -95,7 +97,7 @@ button:hover {
 }
 
 /* Home */
-.home {
+.info {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -119,6 +121,30 @@ button:hover {
     width: 80%;
     border-radius: 10px;
     align-self: center;
+}
+
+/* Menu */
+
+.apps-titles {
+    color: var(--main-text);
+    font-size: 30px;
+    font-family: 'Kanit'
+}
+
+.food-img {
+    height: 50%;
+    width: 50%;
+    border-radius: 10%;
+}
+
+.apps {
+    display: flex;
+    padding: 30px 0;
+    flex-direction: column;
+}
+
+.app {
+    margin: 30px 0 
 }
 
 /* Footer */

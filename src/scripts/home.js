@@ -2,7 +2,7 @@ import plateImage from '../images/plate.jpeg'
 
 function makeHome() {
     const home = document.createElement('div');
-    home.classList.add('home')
+    home.classList.add('info')
 
     const paragraph = document.createElement('p');
     paragraph.classList.add('about');
