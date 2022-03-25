@@ -1,6 +1,8 @@
 import './styles.css'; 
 import prepareHome from './home';
 import caesar from '../images/Caesar Salad.jpeg'
+import steak from '../images/Steak Tartare.jpeg'
+import french from '../images/French Onion Soup.jpeg'
 // import './menu';
 // import './contact';
 
@@ -37,6 +39,12 @@ const createNav = () => {
     const menu = document.createElement('button');
     menu.textContent = 'Menu'
 
+    menu.addEventListener('click', () => {
+        const main = document.querySelector('.main')
+        main.textContent = '';
+        prepareMenu()
+    });
+
     const contact = document.createElement('button');
     contact.textContent = 'Contact'
 
@@ -55,13 +63,17 @@ const createMain = () => {
     
     // Apps
     const imgSources = {
-        'caesar': caesar
+        'caesar': caesar,
+        'steak': steak,
+        'french': french,
     }
 
-    const appsTitle = document.createElement('h2');
-    appsTitle.classList.add('apps-titles');
-    appsTitle.textContent = 'Appetizers';
-    menu.append(appsTitle)
+    const createTitle = (name) => {
+        const title = document.createElement('h2');
+        title.classList.add('food-titles');
+        title.textContent = name;
+        menu.append(title)
+    }
 
     const addFood = (name) => {
         const food = document.createElement('div');
@@ -78,15 +90,31 @@ const createMain = () => {
         menu.appendChild(food)
         food.append(foodImage)
         food.append(foodName)
-
-        return food
     };
 
-    addFood('Caesar Salad');
+    createTitle('Appetizers')
+    addFood('Caesar Salad')
+    addFood('Steak Tartare')
+    addFood('French Onion Soup')
+
+    createTitle('Entrées')
+    // addFood()
+    // addFood()
+    // addFood()
+
+    createTitle('Desserts')
+    // addFood()
+    // addFood()
+    // addFood()
 
     main.append(menu)
-    
+
     return main
+}
+
+const prepareMenu = () => {
+    const main = document.querySelector(".main");
+    main.appendChild(createMain());
 }
 
 const createFooter = () => {

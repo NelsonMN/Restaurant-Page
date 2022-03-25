@@ -1,6 +1,6 @@
-import plateImage from '../images/plate.jpeg'
+import french from '../images/French Onion Soup.jpeg'
 
-function makeHome() {
+function createHome() {
     const home = document.createElement('div');
     home.classList.add('info')
 
@@ -8,16 +8,16 @@ function makeHome() {
     paragraph.classList.add('about');
     paragraph.textContent = 'One of the finest French restaurants in all of North America.'
 
-    const plate = new Image();
-    plate.classList.add('plate')
-    plate.src = plateImage;
+    const soup = new Image();
+    soup.classList.add('soup')
+    soup.src = french;
 
     const paragraph1 = document.createElement('p');
     paragraph1.classList.add('about')
     paragraph1.textContent = 'Inspired by the bistro genre, our menu celebrates timeless French cooking with dishes that celebrate traditional European techniques.'
 
     home.append(paragraph);
-    home.append(plate)
+    home.append(soup)
     home.append(paragraph1);
 
     return home
@@ -25,7 +25,7 @@ function makeHome() {
 
 const prepareHome = () => {
     const main = document.querySelector(".main");
-    main.appendChild(makeHome());
+    main.appendChild(createHome());
 }
 
 export default prepareHome
