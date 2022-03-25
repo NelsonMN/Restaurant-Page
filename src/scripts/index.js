@@ -1,6 +1,6 @@
 import './styles.css'; 
 import prepareHome from './home';
-import Caesar from '../images/caesar.jpeg'
+import caesar from '../images/Caesar Salad.jpeg'
 // import './menu';
 // import './contact';
 
@@ -28,7 +28,11 @@ const createNav = () => {
     const home = document.createElement('button');
     home.textContent = 'Home'
 
-    home.addEventListener('click', prepareHome);
+    home.addEventListener('click', () => {
+        const main = document.querySelector('.main')
+        main.textContent = '';
+        prepareHome()
+    });
 
     const menu = document.createElement('button');
     menu.textContent = 'Menu'
@@ -49,45 +53,39 @@ const createMain = () => {
     const menu = document.createElement('div');
     menu.classList.add('menu', 'info')
     
-    const apps = document.createElement('div');
-    apps.classList.add('apps')
-    
     // Apps
+    const imgSources = {
+        'caesar': caesar
+    }
 
     const appsTitle = document.createElement('h2');
     appsTitle.classList.add('apps-titles');
-    appsTitle.textContent = `Hors d’Oeuvres`;
+    appsTitle.textContent = 'Appetizers';
+    menu.append(appsTitle)
 
-    const appOne = document.createElement('div')
-    appOne.classList.add('app')
-    const caesar = new Image();
-    caesar.classList.add('food-img');
-    caesar.src = Caesar
+    const addFood = (name) => {
+        const food = document.createElement('div');
+        food.classList.add('food');
 
-    const appTwo = document.createElement('div')
-    appTwo.classList.add('app')
-    const caesarTwo = new Image();
-    caesarTwo.classList.add('food-img');
-    caesarTwo.src = Caesar
+        const foodImage = new Image();
+        foodImage.classList.add('food-img');
+        foodImage.src = imgSources[name.toLowerCase().split(' ')[0]]
+        foodImage.alt = name;
+        
+        const foodName = document.createElement('h4');
+        foodName.textContent = name;
+         
+        menu.appendChild(food)
+        food.append(foodImage)
+        food.append(foodName)
 
-    const appThree = document.createElement('div')
-    appThree.classList.add('app')
-    const caesarThree = new Image();
-    caesarThree.classList.add('food-img');
-    caesarThree.src = Caesar
+        return food
+    };
+
+    addFood('Caesar Salad');
 
     main.append(menu)
-    menu.append(apps)
-
-    apps.append(appsTitle)
-    apps.append(appOne)
-    appOne.append(caesar)
-    apps.append(appTwo)
-    appTwo.append(caesarTwo)
-    apps.append(appThree)
-    appThree.append(caesarThree)
-
-
+    
     return main
 }
 

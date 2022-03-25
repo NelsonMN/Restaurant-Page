@@ -65,7 +65,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     height: 20vh;
-    width: 100vw;
+    max-width: 100vw;
     justify-content: center;
     align-items: center;
     gap: 50px;
@@ -93,16 +93,21 @@ button:hover {
 /* Content */
 
 .main {
+    display: flex;
+    justify-content: center;
     min-height: 72vh;
+    max-width: 100vw;
+    
 }
 
 /* Home */
 .info {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    margin: 125px 250px;
+    justify-content: center;
+    width: 800px;
+    margin: 120px 0;
     background-color: var(--menu-color);
     border-radius: 10px;
     padding: 50px 100px;
@@ -133,7 +138,6 @@ button:hover {
 
 .food-img {
     height: 50%;
-    width: 50%;
     border-radius: 10%;
 }
 
@@ -155,7 +159,7 @@ button:hover {
     height: 8vh;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    max-width: 100vw;
     background-color: var(--menu-color);
     color: var(--main-text);
     font-family: 'Kanit';
