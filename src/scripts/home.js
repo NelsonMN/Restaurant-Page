@@ -1,6 +1,6 @@
 import french from '../images/French Onion Soup.jpeg'
 
-function createHome() {
+function makeHome() {
     const home = document.createElement('div');
     home.classList.add('info')
 
@@ -25,7 +25,7 @@ function createHome() {
 
 const prepareHome = () => {
     const main = document.querySelector(".main");
-    main.appendChild(createHome());
+    main.appendChild(makeHome());
 }
 
 export default prepareHome
