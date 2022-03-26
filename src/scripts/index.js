@@ -3,6 +3,9 @@ import prepareHome from './home';
 import caesar from '../images/Caesar Salad.jpeg'
 import steak from '../images/Steak Tartare.jpeg'
 import french from '../images/French Onion Soup.jpeg'
+import boeuf from '../images/Boeuf Bourguignon.jpeg'
+import coq from '../images/Coq Au Vin.jpeg'
+import tagliatelle from '../images/Tagliatelle.jpeg'
 // import './menu';
 // import './contact';
 
@@ -66,6 +69,9 @@ const createMain = () => {
         'caesar': caesar,
         'steak': steak,
         'french': french,
+        'boeuf': boeuf,
+        'coq': coq,
+        'tagliatelle': tagliatelle
     }
 
     const createTitle = (name) => {
@@ -97,10 +103,10 @@ const createMain = () => {
     addFood('Steak Tartare')
     addFood('French Onion Soup')
 
-    createTitle('Entrées')
-    // addFood()
-    // addFood()
-    // addFood()
+    createTitle('Mains')
+    addFood('Boeuf Bourguignon')
+    addFood('Coq Au Vin')
+    addFood('Tagliatelle')
 
     createTitle('Desserts')
     // addFood()
