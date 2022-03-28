@@ -21,14 +21,14 @@ function makeMenu() {
         'tagliatelle': tagliatelle,
         'lemon': lemon,
         'crème': crème
-    }
+    };
 
     const createTitle = (name) => {
         const title = document.createElement('h2');
         title.classList.add('food-titles');
         title.textContent = name;
         menu.append(title)
-    }
+    };
 
     const addFood = (name) => {
         const food = document.createElement('div');
@@ -36,7 +36,7 @@ function makeMenu() {
 
         const foodImage = new Image();
         foodImage.classList.add('food-img');
-        foodImage.src = imgSources[name.toLowerCase().split(' ')[0]]
+        foodImage.src = imgSources[name.toLowerCase().split(' ')[0]];
         foodImage.alt = name;
         
         const foodName = document.createElement('h4');
@@ -70,6 +70,6 @@ function makeMenu() {
 const prepareMenu = () => {
     const main = document.querySelector(".main");
     main.appendChild(makeMenu());
-}
+};
 
 export default prepareMenu
