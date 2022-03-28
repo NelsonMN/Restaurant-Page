@@ -3,7 +3,6 @@ import prepareHome from './home';
 import prepareMenu from './menu';
 import prepareContact from './contact'
 
-// import './contact';
 
 const content = document.querySelector('.content')
 
@@ -102,11 +101,9 @@ const createFooter = () => {
     return footer
 }
 
-function CreateWebsite() {
+(function CreateWebsite() {
     content.appendChild(createHeader());
     content.appendChild(createMain()); 
     content.appendChild(createFooter());
     prepareHome();
-}
-
-CreateWebsite()
+})();
