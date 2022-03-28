@@ -1,6 +1,7 @@
 import './styles.css'; 
 import prepareHome from './home';
 import prepareMenu from './menu';
+import prepareContact from './contact'
 
 // import './contact';
 
@@ -60,7 +61,7 @@ const createNav = () => {
         const main = document.querySelector('.main')
         main.textContent = '';
         toggleOnClass(contact)
-        // prepareContact()
+        prepareContact()
     });
 
     nav.append(home, menu, contact)
@@ -82,13 +83,6 @@ const toggleOnClass = (element) => {
 const createMain = () => {
     const main = document.createElement('div');
     main.classList.add('main');
-
-    const contact = document.createElement('div');
-    contact.classList.add('info')
-
-    
-    content.append(main);
-    main.append(contact)
 
     return main
 }
@@ -112,7 +106,7 @@ function CreateWebsite() {
     content.appendChild(createHeader());
     content.appendChild(createMain()); 
     content.appendChild(createFooter());
-    // prepareHome();
+    prepareHome();
 }
 
 CreateWebsite()

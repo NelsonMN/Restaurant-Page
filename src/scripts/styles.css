@@ -36,7 +36,7 @@ a {
     transition: transform .4s
 }
 
-.content{
+.content {
     display: flex;
     flex-direction: column;
 }
@@ -163,7 +163,8 @@ button:hover {
 
 /* Menu */
 
-.food-titles {
+.food-titles,
+.contact {
     color: var(--main-text);
     font-size: 30px;
     font-family: 'Kanit'
@@ -201,6 +202,36 @@ button:hover {
 
 .app {
     margin: 30px 0 
+}
+
+
+/* Contact */
+
+.people {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.person {
+    font-family: Kanit;
+    color: var(--main-text);
+    gap: 300px;
+    padding: 10px 80px;
+    border: 2px solid var(--main-text);
+    border-radius: 10px;
+}
+
+.map-holder {
+
+    border: 0;
+    margin-top: 30px;
+}
+
+.map {
+    width: 600px; 
+    height: 450px; 
 }
 
 /* Footer */

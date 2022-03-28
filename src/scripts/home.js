@@ -6,7 +6,7 @@ function makeHome() {
 
     const paragraph = document.createElement('p');
     paragraph.classList.add('about');
-    paragraph.textContent = 'One of the finest French restaurants in all of North America.'
+    paragraph.textContent = 'One of the finest French restaurants in all of Europe.'
 
     const soup = new Image();
     soup.classList.add('soup')
